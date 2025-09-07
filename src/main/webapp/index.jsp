@@ -8,6 +8,6 @@
 <h1><%= "Hello World!" %>
 </h1>
 <br/>
-<a href="">Quản lý danh mục</a>
+<a href="/categories">Quản lý danh mục</a>
 </body>
 </html>

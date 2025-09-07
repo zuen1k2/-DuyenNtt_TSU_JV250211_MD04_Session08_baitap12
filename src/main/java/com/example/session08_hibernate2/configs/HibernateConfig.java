@@ -18,7 +18,7 @@ public class HibernateConfig {
     @Bean
     public SessionFactory sessionFactory() {
         LocalSessionFactoryBuilder sessionBuilder = new LocalSessionFactoryBuilder(dataSource());
-        sessionBuilder.scanPackages("ra.spring_hibernate_orm.models.entity"); // package containing your entity classes
+        sessionBuilder.scanPackages("com.example.session08_hibernate2"); // package containing your entity classes
         sessionBuilder.addProperties(hibernateProperties());
         return sessionBuilder.buildSessionFactory();
     }
@@ -27,7 +27,7 @@ public class HibernateConfig {
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver"); // MySQL JDBC driver
-        dataSource.setUrl("jdbc:mysql://localhost:3307/Session08_hibernate?createDatabaseIfNotExist=true");// replace with your database URL
+        dataSource.setUrl("jdbc:mysql://localhost:3306/Session08_hibernate?createDatabaseIfNotExist=true");// replace with your database URL
         dataSource.setUsername("root");// replace with your database username
         dataSource.setPassword("12345678"); // replace with your database password
         return dataSource;
